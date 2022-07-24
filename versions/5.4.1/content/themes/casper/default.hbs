@@ -75,10 +75,19 @@
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
+                {{!-- {{navigation type="secondary"}} --}}
             </nav>
             {{!-- <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div> --}}
+            <div class="gh-social">
+                {{#if @site.facebook}}
+                    <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                {{/if}}
+            </div>
         </div>
+        {{!-- <p style="position: absolute; bottom: 14px; left: 45%; " >With love by Realice</p> --}}
     </footer>
 
 </div>
